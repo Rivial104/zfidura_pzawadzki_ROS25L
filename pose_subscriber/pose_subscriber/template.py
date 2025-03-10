@@ -19,6 +19,8 @@ class MyNode(Node):
         self.spawn_turtle(3.0, 1.0, 0, 'turtle1')
         self.i = 0
 
+        self.vel = 2.5
+
         # self.get_logger().info("Twist: ", ) 
 
     def moving_callback(self):  
@@ -33,16 +35,16 @@ class MyNode(Node):
         msg.angular.z = 0.0
 
         if self.i < 4:
-            msg.linear.y = 1.0
+            msg.linear.y = self.vel
         elif self.i < 6:
-            msg.linear.x = 1.0
+            msg.linear.x = self.vel
         elif self.i < 8:
-            msg.linear.y = -1.0
+            msg.linear.y = -self.vel
         elif self.i < 10:
-            msg.linear.x = -1.0
+            msg.linear.x = -self.vel
 
         self.publisher_.publish(msg)
-        # self.get_logger().info(msg)
+        # self.get_logger().info("Iteration: " +str(self.i))
         self.i += 1
 
     def kill_turtle(self, turtle_name):
