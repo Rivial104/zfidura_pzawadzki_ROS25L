@@ -76,6 +76,16 @@ Vector3  angular
 	float64 y
 	float64 z
 
+## Etap 3
 
+Komendy do uruchomienia zolwia z parametrem:
 
+ros2 run pose_subscriber auto_p --ros-args -p letter:=P
+ros2 run pose_subscriber auto_p --ros-args -p letter:=K
+
+## Etap 4
+
+rqt_plot 
+
+ros2 run rqt_plot rqt_plot turtle1/pose/angular_velocity
 
