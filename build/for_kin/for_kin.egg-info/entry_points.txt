@@ -1,0 +1,3 @@
+[console_scripts]
+ForwardKin = for_kin.ForwardKin:main
+

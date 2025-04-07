@@ -1,0 +1,35 @@
+running egg_info
+creating ../build/for_kin/for_kin.egg-info
+writing ../build/for_kin/for_kin.egg-info/PKG-INFO
+writing dependency_links to ../build/for_kin/for_kin.egg-info/dependency_links.txt
+writing entry points to ../build/for_kin/for_kin.egg-info/entry_points.txt
+writing requirements to ../build/for_kin/for_kin.egg-info/requires.txt
+writing top-level names to ../build/for_kin/for_kin.egg-info/top_level.txt
+writing manifest file '../build/for_kin/for_kin.egg-info/SOURCES.txt'
+reading manifest file '../build/for_kin/for_kin.egg-info/SOURCES.txt'
+writing manifest file '../build/for_kin/for_kin.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib/for_kin
+copying for_kin/__init__.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib/for_kin
+copying for_kin/ForwardKin.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib/for_kin
+running install
+running install_lib
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin
+copying /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib/for_kin/__init__.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin
+copying /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build/lib/for_kin/ForwardKin.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin
+byte-compiling /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin/ForwardKin.py to ForwardKin.cpython-310.pyc
+running install_data
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/ament_index
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/ament_index/resource_index
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/ament_index/resource_index/packages
+copying resource/for_kin -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/ament_index/resource_index/packages
+copying package.xml -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin
+running install_egg_info
+Copying ../build/for_kin/for_kin.egg-info to /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages/for_kin-0.0.0-py3.10.egg-info
+running install_scripts
+Installing ForwardKin script to /home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/for_kin
+writing list of installed files to '/home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/install.log'

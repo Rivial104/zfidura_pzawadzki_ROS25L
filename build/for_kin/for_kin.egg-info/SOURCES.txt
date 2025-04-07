@@ -1,0 +1,16 @@
+package.xml
+setup.cfg
+setup.py
+../build/for_kin/for_kin.egg-info/PKG-INFO
+../build/for_kin/for_kin.egg-info/SOURCES.txt
+../build/for_kin/for_kin.egg-info/dependency_links.txt
+../build/for_kin/for_kin.egg-info/entry_points.txt
+../build/for_kin/for_kin.egg-info/requires.txt
+../build/for_kin/for_kin.egg-info/top_level.txt
+../build/for_kin/for_kin.egg-info/zip-safe
+for_kin/ForwardKin.py
+for_kin/__init__.py
+resource/for_kin
+test/test_copyright.py
+test/test_flake8.py
+test/test_pep257.py

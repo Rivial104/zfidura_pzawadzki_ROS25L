@@ -1,0 +1,290 @@
+[0.142s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.142s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x767dd0f55690>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x767dd0f551e0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x767dd0f551e0>>, mixin_verb=('build',))
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.325s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.326s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.326s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/rivial/Desktop/ROS2/ros2_ws/src'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.326s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extension 'colcon_pkg'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extensions ['colcon_meta']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extension 'colcon_meta'
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extensions ['ros']
+[0.339s] Level 1:colcon.colcon_core.package_identification:_identify(for_kin) by extension 'ros'
+[0.341s] DEBUG:colcon.colcon_core.package_identification:Package 'for_kin' with type 'ros.ament_python' and name 'for_kin'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['ignore', 'ignore_ament_install']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'ignore'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'ignore_ament_install'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['colcon_pkg']
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'colcon_pkg'
+[0.341s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'ros'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['cmake', 'python']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'cmake'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'python'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extensions ['python_setup_py']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(img) by extension 'python_setup_py'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extensions ['ignore', 'ignore_ament_install']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extension 'ignore'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extension 'ignore_ament_install'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extensions ['colcon_pkg']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extension 'colcon_pkg'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extensions ['colcon_meta']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extension 'colcon_meta'
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extensions ['ros']
+[0.342s] Level 1:colcon.colcon_core.package_identification:_identify(learning_tf2_py) by extension 'ros'
+[0.343s] DEBUG:colcon.colcon_core.package_identification:Package 'learning_tf2_py' with type 'ros.ament_python' and name 'learning_tf2_py'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extension 'ignore'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extension 'ignore_ament_install'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extensions ['colcon_pkg']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extension 'colcon_pkg'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extensions ['colcon_meta']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extension 'colcon_meta'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extensions ['ros']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(my_urdf_pkg) by extension 'ros'
+[0.345s] DEBUG:colcon.colcon_core.package_identification:Package 'my_urdf_pkg' with type 'ros.ament_cmake' and name 'my_urdf_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extension 'ignore_ament_install'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extensions ['colcon_pkg']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extension 'colcon_pkg'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extensions ['colcon_meta']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extension 'colcon_meta'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extensions ['ros']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(pose_subscriber) by extension 'ros'
+[0.346s] DEBUG:colcon.colcon_core.package_identification:Package 'pose_subscriber' with type 'ros.ament_python' and name 'pose_subscriber'
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.346s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.381s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.385s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 313 installed packages in /opt/ros/humble
+[0.386s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_clean_cache' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_clean_first' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'cmake_force_configure' from command line to 'False'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'ament_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'catkin_cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'for_kin' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.435s] DEBUG:colcon.colcon_core.verb:Building package 'for_kin' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin', 'merge_install': False, 'path': '/home/rivial/Desktop/ROS2/ros2_ws/src/for_kin', 'symlink_install': False, 'test_result_base': None}
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_args' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_target' from command line to 'None'
+[0.435s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'learning_tf2_py' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'learning_tf2_py' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py', 'merge_install': False, 'path': '/home/rivial/Desktop/ROS2/ros2_ws/src/learning_tf2_py', 'symlink_install': False, 'test_result_base': None}
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_target' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.436s] Level 5:colcon.colcon_core.verb:set package 'my_urdf_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.436s] DEBUG:colcon.colcon_core.verb:Building package 'my_urdf_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg', 'merge_install': False, 'path': '/home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg', 'symlink_install': False, 'test_result_base': None}
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_target' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_clean_cache' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_clean_first' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'cmake_force_configure' from command line to 'False'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'ament_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'catkin_cmake_args' from command line to 'None'
+[0.437s] Level 5:colcon.colcon_core.verb:set package 'pose_subscriber' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.437s] DEBUG:colcon.colcon_core.verb:Building package 'pose_subscriber' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber', 'merge_install': False, 'path': '/home/rivial/Desktop/ROS2/ros2_ws/src/pose_subscriber', 'symlink_install': False, 'test_result_base': None}
+[0.437s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.438s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.438s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rivial/Desktop/ROS2/ros2_ws/src/for_kin' with build type 'ament_python'
+[0.438s] Level 1:colcon.colcon_core.shell:create_environment_hook('for_kin', 'ament_prefix_path')
+[0.440s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.441s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/ament_prefix_path.ps1'
+[0.442s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/ament_prefix_path.dsv'
+[0.442s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/ament_prefix_path.sh'
+[0.443s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.443s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.446s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rivial/Desktop/ROS2/ros2_ws/src/learning_tf2_py' with build type 'ament_python'
+[0.446s] Level 1:colcon.colcon_core.shell:create_environment_hook('learning_tf2_py', 'ament_prefix_path')
+[0.446s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/ament_prefix_path.ps1'
+[0.447s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/ament_prefix_path.dsv'
+[0.447s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/ament_prefix_path.sh'
+[0.448s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.448s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.450s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg' with build type 'ament_cmake'
+[0.450s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg'
+[0.451s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.451s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.454s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/rivial/Desktop/ROS2/ros2_ws/src/pose_subscriber' with build type 'ament_python'
+[0.454s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_subscriber', 'ament_prefix_path')
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/ament_prefix_path.ps1'
+[0.455s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/ament_prefix_path.dsv'
+[0.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/ament_prefix_path.sh'
+[0.456s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.456s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.763s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rivial/Desktop/ROS2/ros2_ws/src/for_kin'
+[0.764s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.764s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.147s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rivial/Desktop/ROS2/ros2_ws/src/learning_tf2_py'
+[1.147s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.147s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.154s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg -DCMAKE_INSTALL_PREFIX=/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg
+[1.514s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/rivial/Desktop/ROS2/ros2_ws/src/pose_subscriber'
+[1.514s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.514s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.104s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg -DCMAKE_INSTALL_PREFIX=/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg
+[2.110s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg -- -j8 -l8
+[2.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/pose_subscriber': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pose_subscriber build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/install.log --single-version-externally-managed install_data
+[2.147s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/for_kin': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/for_kin build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/install.log --single-version-externally-managed install_data
+[2.161s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/learning_tf2_py': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/learning_tf2_py build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/install.log --single-version-externally-managed install_data
+[2.177s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg -- -j8 -l8
+[2.194s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg
+[2.210s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_urdf_pkg)
+[2.211s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg
+[2.215s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg' for CMake module files
+[2.216s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg' for CMake config files
+[2.216s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_urdf_pkg', 'cmake_prefix_path')
+[2.216s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.ps1'
+[2.217s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.dsv'
+[2.218s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.sh'
+[2.219s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/bin'
+[2.219s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/lib/pkgconfig/my_urdf_pkg.pc'
+[2.220s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/lib/python3.10/site-packages'
+[2.220s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/bin'
+[2.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.ps1'
+[2.222s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.dsv'
+[2.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.sh'
+[2.225s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.bash'
+[2.227s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.zsh'
+[2.228s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/colcon-core/packages/my_urdf_pkg)
+[2.229s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(my_urdf_pkg)
+[2.230s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg' for CMake module files
+[2.230s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg' for CMake config files
+[2.231s] Level 1:colcon.colcon_core.shell:create_environment_hook('my_urdf_pkg', 'cmake_prefix_path')
+[2.231s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.ps1'
+[2.232s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.dsv'
+[2.233s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/hook/cmake_prefix_path.sh'
+[2.234s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/bin'
+[2.234s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/lib/pkgconfig/my_urdf_pkg.pc'
+[2.234s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/lib/python3.10/site-packages'
+[2.235s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/bin'
+[2.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.ps1'
+[2.236s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.dsv'
+[2.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.sh'
+[2.238s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.bash'
+[2.239s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.zsh'
+[2.239s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/colcon-core/packages/my_urdf_pkg)
+[2.545s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py' for CMake module files
+[2.546s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/learning_tf2_py' returned '0': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/learning_tf2_py build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/learning_tf2_py/install.log --single-version-externally-managed install_data
+[2.547s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py' for CMake config files
+[2.548s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/lib'
+[2.548s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/bin'
+[2.548s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/lib/pkgconfig/learning_tf2_py.pc'
+[2.549s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/lib/python3.10/site-packages'
+[2.549s] Level 1:colcon.colcon_core.shell:create_environment_hook('learning_tf2_py', 'pythonpath')
+[2.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/pythonpath.ps1'
+[2.550s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/pythonpath.dsv'
+[2.550s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/hook/pythonpath.sh'
+[2.551s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/bin'
+[2.551s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(learning_tf2_py)
+[2.552s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/package.ps1'
+[2.553s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/package.dsv'
+[2.554s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/package.sh'
+[2.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/package.bash'
+[2.555s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/learning_tf2_py/package.zsh'
+[2.556s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rivial/Desktop/ROS2/ros2_ws/src/install/learning_tf2_py/share/colcon-core/packages/learning_tf2_py)
+[2.558s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber' for CMake module files
+[2.559s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/pose_subscriber' returned '0': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/pose_subscriber build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/install.log --single-version-externally-managed install_data
+[2.560s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber' for CMake config files
+[2.561s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib'
+[2.561s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/bin'
+[2.561s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/pkgconfig/pose_subscriber.pc'
+[2.561s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages'
+[2.561s] Level 1:colcon.colcon_core.shell:create_environment_hook('pose_subscriber', 'pythonpath')
+[2.562s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/pythonpath.ps1'
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/pythonpath.dsv'
+[2.563s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/hook/pythonpath.sh'
+[2.564s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/bin'
+[2.565s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(pose_subscriber)
+[2.565s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/package.ps1'
+[2.566s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/package.dsv'
+[2.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/package.sh'
+[2.567s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/package.bash'
+[2.568s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/package.zsh'
+[2.568s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/colcon-core/packages/pose_subscriber)
+[2.570s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin' for CMake module files
+[2.571s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/for_kin' returned '0': PYTHONPATH=/home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/for_kin build --build-base /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/build install --record /home/rivial/Desktop/ROS2/ros2_ws/src/build/for_kin/install.log --single-version-externally-managed install_data
+[2.571s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin' for CMake config files
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/bin'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/pkgconfig/for_kin.pc'
+[2.572s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/lib/python3.10/site-packages'
+[2.572s] Level 1:colcon.colcon_core.shell:create_environment_hook('for_kin', 'pythonpath')
+[2.573s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/pythonpath.ps1'
+[2.573s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/pythonpath.dsv'
+[2.574s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/hook/pythonpath.sh'
+[2.574s] Level 1:colcon.colcon_core.environment:checking '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/bin'
+[2.574s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(for_kin)
+[2.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/package.ps1'
+[2.576s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/package.dsv'
+[2.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/package.sh'
+[2.577s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/package.bash'
+[2.577s] INFO:colcon.colcon_core.shell:Creating package script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/for_kin/package.zsh'
+[2.578s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/rivial/Desktop/ROS2/ros2_ws/src/install/for_kin/share/colcon-core/packages/for_kin)
+[2.578s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.579s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.579s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.579s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.587s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.587s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.602s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.603s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/local_setup.ps1'
+[2.604s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rivial/Desktop/ROS2/ros2_ws/src/install/_local_setup_util_ps1.py'
+[2.607s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/setup.ps1'
+[2.609s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/local_setup.sh'
+[2.609s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/rivial/Desktop/ROS2/ros2_ws/src/install/_local_setup_util_sh.py'
+[2.610s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/setup.sh'
+[2.611s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/local_setup.bash'
+[2.612s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/setup.bash'
+[2.613s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/local_setup.zsh'
+[2.614s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/rivial/Desktop/ROS2/ros2_ws/src/install/setup.zsh'

@@ -1,0 +1,4 @@
+[console_scripts]
+auto_p = pose_subscriber.template:main
+pose_sub = pose_subscriber.pose_sub:main
+

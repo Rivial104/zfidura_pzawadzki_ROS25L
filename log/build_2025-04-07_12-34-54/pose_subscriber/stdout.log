@@ -1,0 +1,42 @@
+running egg_info
+creating ../build/pose_subscriber/pose_subscriber.egg-info
+writing ../build/pose_subscriber/pose_subscriber.egg-info/PKG-INFO
+writing dependency_links to ../build/pose_subscriber/pose_subscriber.egg-info/dependency_links.txt
+writing entry points to ../build/pose_subscriber/pose_subscriber.egg-info/entry_points.txt
+writing requirements to ../build/pose_subscriber/pose_subscriber.egg-info/requires.txt
+writing top-level names to ../build/pose_subscriber/pose_subscriber.egg-info/top_level.txt
+writing manifest file '../build/pose_subscriber/pose_subscriber.egg-info/SOURCES.txt'
+reading manifest file '../build/pose_subscriber/pose_subscriber.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../build/pose_subscriber/pose_subscriber.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber
+copying pose_subscriber/template.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber
+copying pose_subscriber/__init__.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber
+copying pose_subscriber/pose_sub.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber
+running install
+running install_lib
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber
+copying /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber/template.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber
+copying /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber/__init__.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber
+copying /home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/build/lib/pose_subscriber/pose_sub.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber
+byte-compiling /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber/template.py to template.cpython-310.pyc
+byte-compiling /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber/pose_sub.py to pose_sub.cpython-310.pyc
+running install_data
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/ament_index
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/ament_index/resource_index
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/ament_index/resource_index/packages
+copying resource/pose_subscriber -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/ament_index/resource_index/packages
+copying package.xml -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber
+creating /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/launch
+copying launch/auto_p_launch.py -> /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/share/pose_subscriber/launch
+running install_egg_info
+Copying ../build/pose_subscriber/pose_subscriber.egg-info to /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/python3.10/site-packages/pose_subscriber-0.0.0-py3.10.egg-info
+running install_scripts
+Installing auto_p script to /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/pose_subscriber
+Installing pose_sub script to /home/rivial/Desktop/ROS2/ros2_ws/src/install/pose_subscriber/lib/pose_subscriber
+writing list of installed files to '/home/rivial/Desktop/ROS2/ros2_ws/src/build/pose_subscriber/install.log'

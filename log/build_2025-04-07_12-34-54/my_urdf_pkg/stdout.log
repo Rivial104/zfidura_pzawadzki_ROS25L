@@ -1,0 +1,40 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg
+-- Install configuration: ""
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/launch
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/launch/display.launch.py
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/rviz
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/rviz/urdf.rviz
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/urdf
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/urdf/manipulator_model.urdf
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/ament_index/resource_index/package_run_dependencies/my_urdf_pkg
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/ament_index/resource_index/parent_prefix_path/my_urdf_pkg
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/environment/ament_prefix_path.sh
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/environment/ament_prefix_path.dsv
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/environment/path.sh
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/environment/path.dsv
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/local_setup.bash
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/local_setup.sh
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/local_setup.zsh
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/local_setup.dsv
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.dsv
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/ament_index/resource_index/packages/my_urdf_pkg
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/cmake/my_urdf_pkgConfig.cmake
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/cmake/my_urdf_pkgConfig-version.cmake
+-- Installing: /home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg/share/my_urdf_pkg/package.xml

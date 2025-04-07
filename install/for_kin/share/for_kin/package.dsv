@@ -1,0 +1,6 @@
+source;share/for_kin/hook/pythonpath.ps1
+source;share/for_kin/hook/pythonpath.dsv
+source;share/for_kin/hook/pythonpath.sh
+source;share/for_kin/hook/ament_prefix_path.ps1
+source;share/for_kin/hook/ament_prefix_path.dsv
+source;share/for_kin/hook/ament_prefix_path.sh
