@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<robot name="my_manipulator">
+
+  <!-- Colors -->
+  <material name="Yellow">
+    <color rgba="1.0 1.0 0.0 1.0"/>
+  </material>
+  <material name="Blue">
+  <color rgba="0.0 0.0 1.0 1.0"/>      
+  </material>
+  <material name="Red">
+    <color rgba="1 0 0 1.0"/>      
+  </material>
+
+
+  <link name="Base">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.15"/>
+      <geometry>
+        <box size="0.3 0.3 0.3" />
+      </geometry>
+      <material name="Yellow"/>
+    </visual>
+  </link>
+
+  <joint name="Joint_1" type="revolute">
+    <parent link="Base"/>
+    <child link="Link_1"/>
+    <origin rpy="0 0 0" xyz="0 0 0.3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-3.14159265359" upper="3.14159265359" velocity="0.5" />
+  </joint>
+
+
+  <link name="Link_1">
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0.15"/>
+      <geometry>
+        <box size="0.3 0.3 0.3" />
+      </geometry>
+      <material name="Blue"/>
+    </visual>
+  </link>
+
+</robot>
