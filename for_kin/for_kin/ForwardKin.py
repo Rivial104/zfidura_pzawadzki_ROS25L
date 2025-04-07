@@ -2,7 +2,9 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import JointState
-from geometry_msgs.msg import PoseStamped
+from geometry_msgs.msg import PoseStamped, TransformStamped
+
+from tf2_ros import TransformBroadcaster
 
 import numpy as np
 
@@ -18,8 +20,7 @@ class ForwardKin(Node):
 
         self.publisher = self.create_publisher(PoseStamped, '/fwd_kin',10)
 
-        # time_period = 0.1
-        # self.timer = self.create.timer(time_period,self.timer_callback)
+        self.tf_broadcaster = TransformBroadcaster(self)
 
 
     def listener_callback(self, msg):
@@ -30,6 +31,21 @@ class ForwardKin(Node):
         rp, quat = self.compute_forward_kin(msg)
 
         msgp = PoseStamped()
+        t = TransformStamped()
+
+        t.header.stamp = self.get_clock().now().to_msg()
+        t.header.frame_id = 'Base'
+        t.child_frame_id = 'TCP'
+
+        t.transform.translation.x = rp[0]
+        t.transform.translation.y = rp[1]
+        t.transform.translation.z = rp[2]
+
+        t.transform.rotation.w = quat[0]
+        t.transform.rotation.x = quat[1]
+        t.transform.rotation.y = quat[2]
+        t.transform.rotation.z = quat[3]
+
         msgp.header.frame_id = "Base"
 
         msgp.pose.position.x = rp[0]
@@ -40,6 +56,8 @@ class ForwardKin(Node):
         msgp.pose.orientation.x = quat[1]
         msgp.pose.orientation.y = quat[2]
         msgp.pose.orientation.z = quat[3]
+
+        self.tf_broadcaster.sendTransform(t)
 
         self.publisher.publish(msgp)
 
