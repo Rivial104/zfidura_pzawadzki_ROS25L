@@ -10,7 +10,8 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('my_urdf_pkg')
-    default_model_path = urdf_tutorial_path / 'urdf/manipulator_model.urdf'
+    default_model_path = urdf_tutorial_path / 'urdf/manipulator_model_with_gripper.urdf'
+    # default_model_path = urdf_tutorial_path / 'urdf/manipulator_model.urdf'
     default_rviz_config_path = urdf_tutorial_path / 'rviz/urdf.rviz'
 
     gui_arg = DeclareLaunchArgument(name='gui', default_value='true', choices=['true', 'false'],

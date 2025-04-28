@@ -17,3 +17,6 @@ position:
 - 0.39081412610659605
 velocity: []
 effort: []
+
+ros2 run for_kin ForwardKin
+
