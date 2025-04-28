@@ -20,18 +20,20 @@ class ControlService(Node):
     def control_callback(self, request, response):
 
         joint_state = JointState()
-        joint_state.name = ['Joint_5']
+        joint_state.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
+        now = self.get_clock().now()
+        joint_state.header.stamp = now.to_msg()
         
         if request.state == 'open':
 
-            joint_state.velocity = [1.0]
+            joint_state.position = [0.0,0.0,0.0,0.0]
 
             response.success = True
             response.message = 'Gripper is opening'
 
         elif request.state == 'close':
 
-            joint_state.velocity = [-1.0]
+            joint_state.position = [0.0,0.0,0.0,0.125]
 
             response.success = True
             response.message = 'Gripper is closing'
