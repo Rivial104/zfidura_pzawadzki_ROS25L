@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'service = gripper_ctrl.gripper_control:main',
             'client = gripper_ctrl.gripper_client:main',
+            'inv_kin = gripper_ctrl.inv_kin_tester:main'
         ],
     },
 )
