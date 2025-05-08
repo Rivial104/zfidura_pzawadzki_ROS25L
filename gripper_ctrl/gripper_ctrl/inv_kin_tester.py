@@ -2,66 +2,43 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import JointState
-from geometry_msgs.msg import PoseStamped, TransformStamped
+from geometry_msgs.msg import PointStamped, TransformStamped
 
 from tf2_ros import TransformBroadcaster
 
 import numpy as np
 
-class ForwardKin(Node):
+class InvKinTester(self):
     def __init__(self):
-        super().__init__('forward_kinematics')
+        super().__init__('inverse_kinematics')
         self.subscription = self.create_subscription(
-            JointState,
-            '/joint_states',
+            PointStamped,
+            '/clicked_point',
             self.listener_callback,
             10)
 
-
-        self.publisher = self.create_publisher(PoseStamped, '/fwd_kin',10)
+        self.publisher = self.create_publisher(JointState, '/joint_states',10)
 
         self.tf_broadcaster = TransformBroadcaster(self)
 
 
     def listener_callback(self, msg):
-        # self.get_logger().info("Link angle 1: " + str(msg.position[0]) + 
-        #                         "Link angle 2: " + str(msg.position[1]) + 
-        #                         "Link angle 3: " + str(msg.position[2]))
+        self.get_logger().info("Link angle 1: " + str(msg.position[0]) + 
+                                "Link angle 2: " + str(msg.position[1]) + 
+                                "Link angle 3: " + str(msg.position[2]))
                                 
-        rp, quat = self.compute_forward_kin(msg)
+        q = self.compute_inverse_kin(msg)
 
-        msgp = PoseStamped()
-        t = TransformStamped()
+        msgp = JointState()
 
-        t.header.stamp = self.get_clock().now().to_msg()
-        t.header.frame_id = 'Base'
-        t.child_frame_id = 'TCP'
-
-        t.transform.translation.x = rp[0]
-        t.transform.translation.y = rp[1]
-        t.transform.translation.z = rp[2]
-
-        t.transform.rotation.w = quat[0]
-        t.transform.rotation.x = quat[1]
-        t.transform.rotation.y = quat[2]
-        t.transform.rotation.z = quat[3]
-
-        msgp.header.frame_id = "Base"
-
-        msgp.pose.position.x = rp[0]
-        msgp.pose.position.y = rp[1]
-        msgp.pose.position.z = rp[2]
-
-        msgp.pose.orientation.w = quat[0]
-        msgp.pose.orientation.x = quat[1]
-        msgp.pose.orientation.y = quat[2]
-        msgp.pose.orientation.z = quat[3]
-
-        self.tf_broadcaster.sendTransform(t)
+        # Assign calcualted values fron invKin to JointStates
+        msgp.position[0] = q[0]
+        msgp.position[1] = q[1]
+        msgp.position[2] = q[2]
 
         self.publisher.publish(msgp)
 
-        self.get_logger().info("Publishing pose: " + str(rp))
+        self.get_logger().info("Publishing pose: " + str(q))
 
 
     def compute_forward_kin(self, msg):
@@ -94,14 +71,27 @@ class ForwardKin(Node):
 
         return rp, quat
 
+    def compute_inverse_kin(self,msg):
+
+        x = msg.position[0]
+        y = msg.position[1]
+        z = msg.position[2]
+
+
+
+        q = [q1, q2, q3]
+
+        return q
+
+
 def main(args=None):
     rclpy.init(args=args)
 
-    forward_kinematics = ForwardKin()
+    inverse_kinematics = InvKinTester()
 
-    rclpy.spin(forward_kinematics)
+    rclpy.spin(inverse_kinematics)
 
-    forward_kinematics.destroy_node()
+    inverse_kinematics.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
