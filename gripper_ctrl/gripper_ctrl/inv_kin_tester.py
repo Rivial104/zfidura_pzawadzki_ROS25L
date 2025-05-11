@@ -61,15 +61,17 @@ class InvKinTester(Node):
         else:
             q3 = np.arccos(cos3)
 
-        cos2 = (z-a)*np.sqrt(a*a*cos3*cos3+2*a*a*cos3+a*a+np.sin(q3)*np.sin(q3))
+        cos2 = (z-a-h)/(np.sqrt((a*a*np.sin(q3)*np.sin(q3))+(a*cos3+a)*(a*cos3+a)))
+        # cos2 = np.arctan2((np.sqrt(x**2+y**2)),(z-a-h)) - 1/2*q3
 
         if cos2 > 1 or cos2 < -1:
             self.get_logger().error(f'Zadany punkt znajduje sie poza przestrzenia robocza manipulatora, wartosc cos2: ' + str(cos2))
         else:
-            q2 = np.arccos(cos2) + np.arctan2(a*cos3+a,np.sin(q3))
+            q2 = np.arccos(cos2) - np.arctan2(a*np.sin(q3),a*cos3+a)
+            # q2 = np.arctan2((np.sqrt(x**2+y**2)),(z-a-h)) - 1/2*q3
 
-        cos1 = y/(a*(cos2+cos3) + a*cos2)
-        sin1 = x/(-a*(cos2+cos3) - a*cos2)
+        cos1 = -y/(a*(np.sin(q2+q3) + np.sin(q2)))
+        sin1 = x/(a*(np.sin(q2+q3) + np.sin(q2)))
 
         if cos1 > 1 or cos1 < -1:
             self.get_logger().error(f'Zadany punkt znajduje sie poza przestrzenia robocza manipulatora, wartosc cos1: ' + str(cos1))

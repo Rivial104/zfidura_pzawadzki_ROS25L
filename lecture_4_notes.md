@@ -25,4 +25,7 @@ Etap 4:
 Parametry grid:
 - Plane COunt, Normal cell -> 5
 - Offset 0;0;2
-- 
+- Size - 0,3
+
+ros2 run gripper_ctrl inv_kin
+
