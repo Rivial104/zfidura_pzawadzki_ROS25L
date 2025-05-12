@@ -6,7 +6,10 @@ from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import Command, LaunchConfiguration
 
 from launch_ros.actions import Node
+from launch.actions import ExecuteProcess
+
 from launch_ros.parameter_descriptions import ParameterValue
+
 
 def generate_launch_description():
     urdf_tutorial_path = get_package_share_path('my_urdf_pkg')
@@ -51,12 +54,25 @@ def generate_launch_description():
         arguments=['-d', LaunchConfiguration('rvizconfig')],
     )
 
+    joint_states_cmd = ExecuteProcess(
+        cmd=[[
+            'sleep 1; ros2 topic pub ',
+            '/joint_states ',
+            'sensor_msgs/msg/JointState ',
+            '"{header: auto, name: ["Joint_1", "Joint_2", "Joint_3", "Joint_5"], position: [0.0, -1.1, -1.1, 0.0]}" ',
+            '--once'
+            ]],
+        shell=True
+        )
+
+
     return LaunchDescription([
         gui_arg,
         model_arg,
         rviz_arg,
         joint_state_publisher_node,
-        joint_state_publisher_gui_node,
+        # joint_state_publisher_gui_node,
+        joint_states_cmd,
         robot_state_publisher_node,
         rviz_node
     ])

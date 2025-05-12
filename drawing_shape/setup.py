@@ -20,6 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'drawing_action_server_exe = drawing_shape.drawing_action_server:main'
         ],
     },
 )
