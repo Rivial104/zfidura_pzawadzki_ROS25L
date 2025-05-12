@@ -1,0 +1,11 @@
+# Request
+float64 time_of_motion
+string shape_to_draw
+float64 figure_param
+---
+# Result
+bool success
+string message
+---
+# Feedback
+float64 percent_complete
