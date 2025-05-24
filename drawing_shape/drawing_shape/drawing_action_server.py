@@ -28,7 +28,7 @@ class DrawingActionServer(Node):
 
         self.goal = DrawShape.Goal()
 
-        self.delta_t = 0.01
+        self.delta_t = 0.1
         self.sim_time = 0
 
     def execute_callback(self, goal_handle):
@@ -46,91 +46,83 @@ class DrawingActionServer(Node):
 
         self.get_logger().info(f'time {time}')
 
-        msgp = JointState()
-        msgp.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
-        now = self.get_clock().now()
-        msgp.header.stamp = now.to_msg()
+        # msgp = JointState()
+        # msgp.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
+        # now = self.get_clock().now()
+        # msgp.header.stamp = now.to_msg()
 
-        msgp.position = [0.0, -1.1, -1.1, 0.0]
+        # msgp.position = [0.0, -1.1, -1.1, 0.0]
 
-        start_pos = [0.0, 0.13598, 0.79208]
+        # start_pos = [0.0, 0.13598, 0.79208]
+        start_pos = [0.0, -0.561, 1.47]
 
 
         if (time < 0 or a < 0):
             self.get_logger().error(f'Nieprawidowa podana wartosc liczbowa - podaj wartosc dodatnia')
+            self.get_logger().info('Goal canceled')
+            goal_handle.canceled()
+            return DrawShape.Result()
+
+        elif (shape != 'square'):
+            self.get_logger().error(f'Nieprawidowy podany ksztalt')
             goal_handle.canceled()
             self.get_logger().info('Goal canceled')
             return DrawShape.Result()
 
-        # elif (shape != 'square'):
-        #     self.get_logger().error(f'Nieprawidowy podany ksztalt')
-        #     goal_handle.canceled()
-        #     self.get_logger().info('Goal canceled')
-        #     return DrawShape.Result()
-        else:
+        n = time/self.delta_t
+        delta_loc = 4*a/n
+        da = 0
 
-            n = time/self.delta_t
-            delta_loc = 4*a/n
-            da = 0
-
-            # Generate square trajectory
-            self.get_logger().info(f'time: {time}')
-            self.get_logger().info(f'n: {n}')
+        # Generate square trajectory
+        self.get_logger().info(f'time: {time}')
+        self.get_logger().info(f'n: {n}')
 
 
-            while(time > self.sim_time):
-                self.sim_time = self.sim_time + self.delta_t
+        while(time > self.sim_time):
+            self.sim_time = self.sim_time + self.delta_t
 
-                # Feedback msg
-                feedback_msg.percent_complete = ((da/(4*a))*100)
-                goal_handle.publish_feedback(feedback_msg)
-                if (da < a):
-                    start_pos[2] = start_pos[2] + delta_loc
-                    da = da + delta_loc
-                    q1,q2,q3 = self.compute_inverse_kin(start_pos)
-                    msgp.position = [q1,q2,q3,0.0]
+            # Feedback msg
+            feedback_msg.percent_complete = ((da/(4*a))*100)
+            goal_handle.publish_feedback(feedback_msg)
+            if (da < a):
+                start_pos[2] = start_pos[2] + delta_loc
+                da = da + delta_loc
+                q1,q2,q3 = self.compute_inverse_kin(start_pos)
 
-                    self.publisher.publish(msgp)
-                elif (da < 2*a):
-                    start_pos[0] = start_pos[0] - delta_loc
-                    da = da + delta_loc
-                    q1,q2,q3 = self.compute_inverse_kin(start_pos)
-                    msgp.position = [q1,q2,q3,0.0]
+            elif (da < 2*a):
+                start_pos[0] = start_pos[0] - delta_loc
+                da = da + delta_loc
+                q1,q2,q3 = self.compute_inverse_kin(start_pos)
 
-                    self.publisher.publish(msgp)
-                elif (da < 3*a):
-                    start_pos[2] = start_pos[2] - delta_loc
-                    da = da + delta_loc
-                    q1,q2,q3 = self.compute_inverse_kin(start_pos)
-                    msgp.position = [q1,q2,q3,0.0]
+            elif (da < 3*a):
+                start_pos[2] = start_pos[2] - delta_loc
+                da = da + delta_loc
+                q1,q2,q3 = self.compute_inverse_kin(start_pos)
 
-                    self.publisher.publish(msgp)
-                else:
-                    start_pos[0] = start_pos[0] + delta_loc
-                    da = da + delta_loc
-                    q1,q2,q3 = self.compute_inverse_kin(start_pos)
-                    msgp.position = [q1,q2,q3,0.0]
+            else:
+                start_pos[0] = start_pos[0] + delta_loc
+                da = da + delta_loc
+                q1,q2,q3 = self.compute_inverse_kin(start_pos)
 
-                    self.publisher.publish(msgp) 
-                
-                # self.get_logger().info("Moving to point " + str(start_pos))
-                self.get_logger().info("Publishing pose: " + str(msgp.position))
+            msgp = JointState()
+            msgp.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
+            now = self.get_clock().now()
+            msgp.header.stamp = now.to_msg()
 
-                tm.sleep(self.delta_t)
-
-
-            goal_handle.succeed()
-            result = DrawShape.Result()
-            result.success = True
-            self.get_logger().info('Returning result: {0}'.format(result.success))
+            msgp.position = [q1,q2,q3,0.0]
+            self.publisher.publish(msgp) 
+            self.
             
-            return result
+            self.get_logger().info("Moving to point " + str(start_pos))
+            self.get_logger().info("Publishing pose: " + str(msgp.position))
+            self.get_logger().info("Current simulation time: " + str(self.sim_time))
+            tm.sleep(self.delta_t)
 
 
-        # Draw square trajectory
-
-        #   X,Y,Z ->  INV KIN  -> q1,q2,q3
-
+        goal_handle.succeed()
+        result = DrawShape.Result()
+        result.success = True
+        self.get_logger().info('Returning result: {0}'.format(result.success))
 
         return result
 
