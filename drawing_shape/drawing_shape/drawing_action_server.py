@@ -11,6 +11,9 @@ from my_urdf_pkg.action import DrawShape
 
 from tf2_ros import TransformBroadcaster
 
+from visualization_msgs.msg import Marker
+from geometry_msgs.msg import Point
+
 import numpy as np
 import time as tm
 
@@ -25,11 +28,30 @@ class DrawingActionServer(Node):
             self.execute_callback)
 
         self.publisher = self.create_publisher(JointState, '/joint_states',10)
+        self.marker_pub = self.create_publisher(Marker, '/marker_example', 10)
 
         self.goal = DrawShape.Goal()
 
         self.delta_t = 0.1
         self.sim_time = 0
+
+        # Marker drawing 
+        self.intermediate_points = []
+
+        self.marker = Marker()
+        self.marker.header.frame_id = "Base"
+        self.marker.id = 0
+
+        self.marker.type = Marker.SPHERE_LIST
+        self.marker.action = Marker.ADD
+        self.marker.scale.x = 0.1
+        self.marker.scale.y = 0.1
+        self.marker.scale.z = 0.1
+        self.marker.color.r = 1.0
+        self.marker.color.g = 0.0
+        self.marker.color.b = 0.0
+        self.marker.color.a = 1.0
+
 
     def execute_callback(self, goal_handle):
         self.get_logger().info('Executing goal...')
@@ -54,7 +76,7 @@ class DrawingActionServer(Node):
         # msgp.position = [0.0, -1.1, -1.1, 0.0]
 
         # start_pos = [0.0, 0.13598, 0.79208]
-        start_pos = [0.0, -0.561, 1.47]
+        start_pos = [0.0, -0.561, 1]
 
 
         if (time < 0 or a < 0):
@@ -111,7 +133,9 @@ class DrawingActionServer(Node):
 
             msgp.position = [q1,q2,q3,0.0]
             self.publisher.publish(msgp) 
-            self.
+
+            self.get_logger().info('Publishing marker at x={}, y={}, z={}'.format(start_pos[0],start_pos[1],start_pos[2]))
+            self.publish_marker(start_pos)
             
             self.get_logger().info("Moving to point " + str(start_pos))
             self.get_logger().info("Publishing pose: " + str(msgp.position))
@@ -169,6 +193,16 @@ class DrawingActionServer(Node):
     def destroy(self):
         self._action_server.destroy()
         super().destroy_node()
+
+    def publish_marker(self, position):
+        point = Point()
+        point.x = float(position[0])
+        point.y = float(position[1])
+        point.z = float(position[2])
+
+        self.intermediate_points.append(point)
+        self.marker.points = self.intermediate_points
+        self.marker_pub.publish(self.marker)
 
 
 def main(args=None):

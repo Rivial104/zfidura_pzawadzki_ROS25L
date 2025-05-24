@@ -20,7 +20,8 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'drawing_action_server_exe = drawing_shape.drawing_action_server:main'
+            'drawing_action_server_exe = drawing_shape.drawing_action_server:main',
+            'marker_drawing = drawing_shape.rviz_marker_example:main'
         ],
     },
 )
