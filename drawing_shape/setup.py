@@ -21,7 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
             'drawing_action_server_exe = drawing_shape.drawing_action_server:main',
-            'marker_drawing = drawing_shape.rviz_marker_example:main'
+            'robot_status = drawing_shape.drawing_action_status:main'
         ],
     },
 )

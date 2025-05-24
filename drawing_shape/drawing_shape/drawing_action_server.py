@@ -101,11 +101,6 @@ class DrawingActionServer(Node):
 
 
         while(time > self.sim_time):
-            self.sim_time = self.sim_time + self.delta_t
-
-            # Feedback msg
-            feedback_msg.percent_complete = ((da/(4*a))*100)
-            goal_handle.publish_feedback(feedback_msg)
             if (da < a):
                 start_pos[2] = start_pos[2] + delta_loc
                 da = da + delta_loc
@@ -140,6 +135,13 @@ class DrawingActionServer(Node):
             self.get_logger().info("Moving to point " + str(start_pos))
             self.get_logger().info("Publishing pose: " + str(msgp.position))
             self.get_logger().info("Current simulation time: " + str(self.sim_time))
+            self.get_logger().info("Distance traveled: " + str(da))
+
+            self.sim_time = self.sim_time + self.delta_t
+
+            # Feedback msg
+            feedback_msg.percent_complete = ((da/(4*a))*100)
+            goal_handle.publish_feedback(feedback_msg)
             tm.sleep(self.delta_t)
 
 
@@ -203,7 +205,6 @@ class DrawingActionServer(Node):
         self.intermediate_points.append(point)
         self.marker.points = self.intermediate_points
         self.marker_pub.publish(self.marker)
-
 
 def main(args=None):
     rclpy.init(args=args)
