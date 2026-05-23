@@ -7,6 +7,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GripperControl.srv"
   "action/DrawShape.action"
+  "action/MoveP2P.action"
 )
 
 install(

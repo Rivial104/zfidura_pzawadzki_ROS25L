@@ -1,0 +1,13 @@
+# Request
+geometry_msgs/Point target
+float64 vmax
+float64 amax
+---
+# Result
+bool success
+string message
+---
+# Feedback
+float64 percent_complete
+float64[] q_current
+geometry_msgs/Point tcp_current

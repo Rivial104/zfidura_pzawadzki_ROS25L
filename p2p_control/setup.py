@@ -15,8 +15,8 @@ setup(
     zip_safe=True,
     maintainer='rivial',
     maintainer_email='pawel.zawadzki9.stud@pw.edu.pl',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Point-to-point action control for the 3-DOF manipulator',
+    license='Apache-2.0',
     extras_require={
         'test': [
             'pytest',
@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'p2p_server = p2p_control.p2p_server:main',
+            'p2p_client = p2p_control.p2p_client:main',
         ],
     },
 )
