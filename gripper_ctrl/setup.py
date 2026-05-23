@@ -23,7 +23,8 @@ setup(
             'service = gripper_ctrl.gripper_control:main',
             'client = gripper_ctrl.gripper_client:main',
             'inv_kin = gripper_ctrl.inv_kin_tester:main',
-            'diff_kinematics = gripper_ctrl.diff_kin:main'
+            'diff_kinematics = gripper_ctrl.diff_kin:main',
+            'traj_gen = gripper_ctrl.trajectory_generator:main'
         ],
     },
 )
