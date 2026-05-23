@@ -15,13 +15,14 @@ setup(
     zip_safe=True,
     maintainer='rivial',
     maintainer_email='rivial104i300@gmail.com',
-    description='TODO: Package description',
-    license='TODO: License declaration',
+    description='Action server for drawing trajectories with the manipulator',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'drawing_action_server_exe = drawing_shape.drawing_action_server:main',
-            'robot_status = drawing_shape.drawing_action_status:main'
+            'robot_status = drawing_shape.drawing_action_status:main',
+            'rviz_marker_example = drawing_shape.rviz_marker_example:main',
         ],
     },
 )

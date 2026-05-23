@@ -1,9 +1,0 @@
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/uninstall.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/my_urdf_pkg_uninstall.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/test.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/edit_cache.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/rebuild_cache.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/list_install_components.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/install.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/install/local.dir
-/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg/CMakeFiles/install/strip.dir

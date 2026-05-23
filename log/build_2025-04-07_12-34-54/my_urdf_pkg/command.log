@@ -1,6 +1,0 @@
-Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg -DCMAKE_INSTALL_PREFIX=/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg
-Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/rivial/Desktop/ROS2/ros2_ws/src/my_urdf_pkg -DCMAKE_INSTALL_PREFIX=/home/rivial/Desktop/ROS2/ros2_ws/src/install/my_urdf_pkg
-Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg -- -j8 -l8
-Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg -- -j8 -l8
-Invoking command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg
-Invoked command in '/home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rivial/Desktop/ROS2/ros2_ws/src/build/my_urdf_pkg

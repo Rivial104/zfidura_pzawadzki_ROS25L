@@ -29,18 +29,18 @@ class ControlService(Node):
             joint_state.position = [0.0,0.0,0.0,0.0]
 
             response.success = True
-            response.message = 'Gripper is opening'
+            response.message = 'Gripper opened'
 
         elif request.state == 'close':
 
             joint_state.position = [0.0,0.0,0.0,0.125]
 
             response.success = True
-            response.message = 'Gripper is closing'
+            response.message = 'Gripper closed'
         
         else:
             response.success = False
-            response.message = 'Command not found'
+            response.message = 'Unknown command'
 
         self.joint_pub.publish(joint_state)
 

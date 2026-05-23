@@ -1,21 +1,22 @@
-import rclpy
-from rclpy.action import ActionServer
-from rclpy.action import GoalResponse
-
 from rclpy.node import Node
+import rclpy
 
-from action_msgs.msg import GoalStatus
+from action_msgs.msg import GoalStatusArray
 
 class DrawingActionStatus(Node):
 
     def __init__(self):
         super().__init__('drawing_action_status')
 
-        self.subscription = self.create_subscription(GoalStatus, '/draw_shape/_action/status', self.execute_callback,10)
+        self.subscription = self.create_subscription(
+            GoalStatusArray,
+            '/draw_shape/_action/status',
+            self.execute_callback,
+            10)
 
     def execute_callback(self, msg):
-        self.get_logger().info('DEBUG')
-        self.get_logger().info(f'Action status' + str(msg.status))
+        for status in msg.status_list:
+            self.get_logger().info(f'Action status: {status.status}')
 
 
 def main(args=None):

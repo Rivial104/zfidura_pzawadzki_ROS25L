@@ -84,14 +84,14 @@
     </visual>
   </link>
 
-  <joint name="tool_nul" type="fixed">
+  <joint name="tool_null_joint" type="fixed">
     <parent link="Link_3"/>
-    <child link="Tool"/>
+    <child link="tool_null"/>
     <origin rpy="0 0 0" xyz="0 0 0.8"/>
   </joint>
 
 
-  <link name="Tool">
+  <link name="tool_null">
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0.15"/>
     </visual>

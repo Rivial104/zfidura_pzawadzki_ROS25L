@@ -25,7 +25,8 @@ class DrawingActionServer(Node):
             self,
             DrawShape,
             'draw_shape',
-            self.execute_callback)
+            self.execute_callback,
+            goal_callback=self.goal_callback)
 
         self.publisher = self.create_publisher(JointState, '/joint_states',10)
         self.marker_pub = self.create_publisher(Marker, '/marker_example', 10)
@@ -52,10 +53,28 @@ class DrawingActionServer(Node):
         self.marker.color.b = 0.0
         self.marker.color.a = 1.0
 
+    def goal_callback(self, goal_request):
+        if goal_request.time_of_motion <= 0:
+            self.get_logger().error('Goal rejected: time_of_motion must be positive')
+            return GoalResponse.REJECT
+
+        if goal_request.shape_to_draw != 'square':
+            self.get_logger().error('Goal rejected: only square trajectory is supported')
+            return GoalResponse.REJECT
+
+        if goal_request.figure_param <= 0:
+            self.get_logger().error('Goal rejected: figure_param must be positive')
+            return GoalResponse.REJECT
+
+        self.get_logger().info('Goal accepted')
+        return GoalResponse.ACCEPT
+
 
     def execute_callback(self, goal_handle):
         self.get_logger().info('Executing goal...')
         result = DrawShape.Result()
+        result.success = False
+        result.message = 'Goal failed'
 
 
         feedback_msg = DrawShape.Feedback()
@@ -68,28 +87,10 @@ class DrawingActionServer(Node):
 
         self.get_logger().info(f'time {time}')
 
-        # msgp = JointState()
-        # msgp.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
-        # now = self.get_clock().now()
-        # msgp.header.stamp = now.to_msg()
-
-        # msgp.position = [0.0, -1.1, -1.1, 0.0]
-
-        # start_pos = [0.0, 0.13598, 0.79208]
+        self.sim_time = 0
+        self.intermediate_points = []
+        self.marker.points = []
         start_pos = [0.0, -0.561, 1]
-
-
-        if (time < 0 or a < 0):
-            self.get_logger().error(f'Nieprawidowa podana wartosc liczbowa - podaj wartosc dodatnia')
-            self.get_logger().info('Goal canceled')
-            goal_handle.canceled()
-            return DrawShape.Result()
-
-        elif (shape != 'square'):
-            self.get_logger().error(f'Nieprawidowy podany ksztalt')
-            goal_handle.canceled()
-            self.get_logger().info('Goal canceled')
-            return DrawShape.Result()
 
         n = time/self.delta_t
         delta_loc = 4*a/n
@@ -148,6 +149,7 @@ class DrawingActionServer(Node):
         goal_handle.succeed()
         result = DrawShape.Result()
         result.success = True
+        result.message = 'Square drawn'
         self.get_logger().info('Returning result: {0}'.format(result.success))
 
         return result

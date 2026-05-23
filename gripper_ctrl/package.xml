@@ -3,18 +3,21 @@
 <package format="3">
   <name>gripper_ctrl</name>
   <version>0.0.0</version>
-  <description>TODO: Package description</description>
+  <description>Gripper control and inverse kinematics nodes</description>
   <maintainer email="rivial104i300@gmail.com">rivial</maintainer>
-  <license>TODO: License declaration</license>
+  <license>Apache-2.0</license>
 
   <test_depend>ament_copyright</test_depend>
   <test_depend>ament_flake8</test_depend>
   <test_depend>ament_pep257</test_depend>
   <test_depend>python3-pytest</test_depend>
 
-  <buildtool_depend>rosidl_default_generators</buildtool_depend>
-  <depend>action_msgs</depend>
-  <member_of_group>rosidl_interface_packages</member_of_group>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>my_urdf_pkg</exec_depend>
+  <exec_depend>numpy</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>

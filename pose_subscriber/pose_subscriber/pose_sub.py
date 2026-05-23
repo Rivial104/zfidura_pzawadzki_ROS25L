@@ -16,7 +16,7 @@ class MinimalSubscriber(Node):
         self.subscription  # prevent unused variable warning
 
     def listener_callback(self, msg):
-        self.get_logger().info("I am currently at " + str(msg.x) + " and " + str(msg.y)) #, " and Y position: %d", msg.y
+        self.get_logger().info(f"I am currently at x={msg.x:.2f} and y={msg.y:.2f}.")
 
 
 def main(args=None):
