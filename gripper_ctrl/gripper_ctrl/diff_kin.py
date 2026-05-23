@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 
 from sensor_msgs.msg import JointState
-from geometry_msgs.msg import PointStamped, TransformStamped
+from geometry_msgs.msg import TwistStamped, TransformStamped
 
 from tf2_ros import TransformBroadcaster
 
@@ -24,30 +24,35 @@ class DiffKin(Node):
         self.a = 0.1
         self.h = 0.2
 
+        self.J = np.zeros(6,2)
 
     def listener_callback(self, msg):
         self.get_logger().info("Point position: " + str(msg.point))
+
+        self.dq
                                 
-        q1,q2,q3 = self.compute_inverse_kin(msg)
+        self.J = self.compute_jakobi_matrix(msg.position)
+
+        x_dot = np.dot(self.J, msg.velocity) 
 
         # Assign calcualted values fron invKin to JointStates
-        msgp = JointState()
-        msgp.name = ['Joint_1','Joint_2','Joint_3','Joint_5']
+        xdot = TwistStamped()
+        xdot.name = ['vx','vy','vz','omx','omy','omz']
         now = self.get_clock().now()
-        msgp.header.stamp = now.to_msg()
+        xdot.header.stamp = now.to_msg()
         
+        xdot.ee_velocity = x_dot
 
-        msgp.position = [q1,q2,q3,0.0]
+        self.publisher.publish(xdot)
 
-        self.publisher.publish(msgp)
-
-        self.get_logger().info("Publishing pose: " + str(msgp.position))
+        self.get_logger().info("Publishing end-effector linear and angular velocity: " + str(xdot.ee_velocity))
 
     def compute_jakobi_matrix(self, msg):
         
-        [q1,q2,q3,0.0] = msg.position
+        [q1,q2,q3,q4] = msg.position
 
         q23 = q2 + q3
+        a = self.a
 
         Jv = np.array([
             [
@@ -67,16 +72,14 @@ class DiffKin(Node):
             ]
         ])
 
-        Jom = np,array([
+        Jom = np.array([
             [0, np.cos(q1), np.cos(q1)],
             [0, np.cos(q1), np.cos(q1)],
             [1, 0, 0]
         ])
 
-        J = np.vstack((Jv, Jw))
+        self.J = np.vstack((Jv, Jom))
         # J = np.array([[Jv], [Jom]])
-
-
 
 
 def main(args=None):
@@ -84,9 +87,9 @@ def main(args=None):
 
     dkin = DiffKin()
 
-    rclpy.spin(differential_kinematics)
+    rclpy.spin(dkin)
 
-    differential_kinematics.destroy_node()
+    dkin.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
